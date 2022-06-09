@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.main {
+    overflow: hidden;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 93vh;
+}
+
+.player {
+    width: 250px;
+    height: 250px;
+
+    /* background-color: red; */
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#video {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+}
+
+.controls {
+    width: 15%;
+
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#audio-button,
+#right,
+#left {
+    background-color: black;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+#right,
+#left {
+    height: 50px;
+    width: 50px;
+}
+
+#video-button {
+    background-color: white;
+    padding: 10px;
+
+    border: 1px solid black;
+    border-radius: 50%;
+
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+#progressbar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25%;
+    height: 25px;
+    background: #d3d3d3;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#progressbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04aa6d;
+    cursor: pointer;
+}
+
+.fa-play-circle {
+    font-size: 100px;
+    color: white;
+}
+
+.fa-arrow-right,
+.fa-arrow-left {
+    color: white;
+}
+
+.fa-video {
+    font-size: 25px;
+}
+
+.sounds {
+    padding-top: 15%;
+    height: 100vh;
+}
+
+.description {
+    text-align: center;
+    font-size: 50px;
+
+    margin-bottom: 100px;
+}
+
+.sounds-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound {
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.sound:not(:last-child) {
+    margin-right: 20px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .controls {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #progressbar {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .controls {
+        width: 50%;
+    }
+    #progressbar {
+        width: 60%;
+    }
+}
